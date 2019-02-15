@@ -23,3 +23,15 @@ I primarily focus on all things "Microsoft Cloud", but have considerable Linux e
 ## Development Environment
 
 I am writing this in Visual Studio Code on Windows but testing the code in an RHEL virtual machine on Azure IaaS.  This creates some challenges because I am using this with Azure credit that I receive for dev/testing purposes and I cannot make outbound SMTP connections.  Once I get to the point of testing, I will likely load it on a Pay-as-you-go VM.  I am using a Standard B1s VM as it is the least expensive ($8/month), which should be rather inexpensive if I turn it off when not used.
+
+## Tasks
+
+* ~~Get/Set myhostname~~ (private)
+* ~~Get/Set mydomain~~ (private)
+* ~~Get/Set mynetworks~~ (private)
+* Get/Set header_checks (Modify "From" address) (private)
+* Get/Set sender_canonical_maps (Modify "MAIL FROM" address) (private)
+* Get/Set sender_dependent_relayhost_maps (sender based routing) (private)
+* Add/Remove header_checks entries (private)
+* Add/Remove sender_canonical_maps entries (private)
+* Create UX functions (public)

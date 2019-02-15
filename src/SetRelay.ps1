@@ -1,0 +1,18 @@
+Function SetRelay {
+    Param (
+        [Parameter(Mandatory)]
+        [String[]]$RemoteIPRanges
+    )
+
+    $mynetworks = ForEach ($network in $RemoteIPRanges) {
+        If ($network.Length -gt 0) {
+            "[$network]"
+        }
+    }
+
+    $Result = postconf -e mynetworks=$($mynetworks -join ' ') 2>&1
+
+    If ($LASTEXITCODE) {
+        Throw "Error: $Result"
+    }
+}
