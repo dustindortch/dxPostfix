@@ -1,5 +1,5 @@
 # dxPostfix.PowerShell
-"Postfix Management Shell" written in PowerShell Core for Linux
+"Postfix Management Shell" written in PowerShell for Linux
 
 ## Overview
 
