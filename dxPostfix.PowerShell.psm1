@@ -5,7 +5,7 @@ $welcome_msg += "Only Postfix cmdlets: Get-PxCommand`n"
 
 Write-Output $welcome_msg
 
-$Scripts = Get-ChildItem $PSScriptRoot\src\*.ps1
+$Scripts = Get-ChildItem -Path $PSScriptRoot\src\*.ps1
 ForEach ($Script in $Scripts) {
 
     If ($Script.BaseName -like "*-*") {

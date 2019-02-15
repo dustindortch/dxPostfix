@@ -9,12 +9,7 @@ Function GetPostconf {
         Throw "Error: $Configuration"
     }
 
-    $OutputHash = @{}
-
     ForEach ($Entry in $Configuration) {
-        $Key,$Value = $Entry.Split('=',2).Trim()
-        $Null = $OutputHash.Add($Key,$Value)
+        ConvertFrom-StringData -StringData $Entry
     }
-
-    $OutputHash
 }

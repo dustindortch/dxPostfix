@@ -8,5 +8,5 @@ Function GetRelay {
         Throw 'Error: no relay networks set'
     }
 
-    $Configuration.mynetworks -replace '\[', '' -replace ']', '' -split ' '
+    $Configuration.mynetworks -replace '\[|\]' -split ' '
 }
