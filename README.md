@@ -30,7 +30,7 @@ I am writing this in Visual Studio Code on Windows but testing the code in an RH
 * ~~Get/Set mydomain~~ (private)
 * ~~Get/Set mynetworks~~ (private)
 * Get/Set header_checks (Modify "From" address) (private)
-* Get/Set sender_canonical_maps (Modify "MAIL FROM" address) (private)
+* ~~Get/Set sender_canonical_maps (Modify "MAIL FROM" address)~~ (private)
 * Get/Set sender_dependent_relayhost_maps (sender based routing) (private)
 * Add/Remove header_checks entries (private)
 * Add/Remove sender_canonical_maps entries (private)
