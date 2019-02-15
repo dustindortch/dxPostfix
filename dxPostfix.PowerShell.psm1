@@ -3,7 +3,7 @@ $welcome_msg = "`n         Welcome to the Postfix Management Shell!`n`n"
 $welcome_msg += "Full list of cmdlets: Get-Command`n"
 $welcome_msg += "Only Postfix cmdlets: Get-PxCommand`n"
 
-Write-Ouput $welcome_msg
+Write-Output $welcome_msg
 
 $Scripts = Get-ChildItem $PSScriptRoot\src\*.ps1
 ForEach ($Script in $Scripts) {

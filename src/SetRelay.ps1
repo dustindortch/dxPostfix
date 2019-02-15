@@ -1,4 +1,5 @@
 Function SetRelay {
+    [CmdletBinding(SupportsShouldProcess)]
     Param (
         [Parameter(Mandatory)]
         [String[]]$RemoteIPRanges
@@ -10,9 +11,11 @@ Function SetRelay {
         }
     }
 
-    $Result = postconf -e mynetworks=$($mynetworks -join ' ') 2>&1
+    If ($PSCmdlet.ShouldProcess("mynetworks=$mynetworks", 'Setting')) {
+        $Result = postconf -e mynetworks=$($mynetworks -join ' ') 2>&1
 
-    If ($LASTEXITCODE) {
-        Throw "Error: $Result"
+        If ($LASTEXITCODE) {
+            Throw "Error: $Result"
+        }
     }
 }
